@@ -1,0 +1,19 @@
+.Menu {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin-left: 0;
+}
+
+.Menu-item {
+    list-style-type: none;
+}
+
+.Menu-link {
+    color: yellow;
+    text-decoration: none;
+}
+
+.Menu-link[class~=active] {
+    text-decoration: underline;
+}

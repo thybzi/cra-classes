@@ -1,7 +1,25 @@
-export function Menu({
-    children,
-}) {
+import { NavLink } from "react-router-dom";
+import classes from './Menu.module.css';
+
+export function Menu() {
     return (
-        <ol>{children || <li>пусто</li>}</ol>
+        <ol className={classes.Menu}>
+            <li className={classes["Menu-item"]}>
+                <NavLink
+                    className={classes["Menu-link"]}
+                    to="/"
+                >
+                    Главная
+                </NavLink>
+            </li>
+            <li className={classes["Menu-item"]}>
+                <NavLink
+                    className={classes["Menu-link"]}
+                    to="/other"
+                >
+                    Другая
+                </NavLink>
+            </li>
+        </ol>
     );
 }

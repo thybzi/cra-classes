@@ -24,6 +24,15 @@
   color: white;
 }
 
+.App-header-light {
+  background-color: #525a6a;
+  color: yellow;
+}
+
+.App-header-light a {
+  color: red;
+}
+
 .App-link {
   color: #61dafb;
 }

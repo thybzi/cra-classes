@@ -1,4 +1,4 @@
-import './Button.css';
+import classes from './Button.module.css';
 
 export function Button(props) {
     const {
@@ -8,7 +8,7 @@ export function Button(props) {
 
     return (
         <button
-            className='Button'
+            className={classes.Button}
             {...props}
         >
             <strong>{text}</strong>
