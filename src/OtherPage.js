@@ -1,8 +1,8 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { Button } from "./Button";
 import { useEffect, useState } from "react";
-import appClasses from './App.module.css';
-import classes from './OtherPage.module.css';
+import appClasses from './App.module.scss';
+import classes from './OtherPage.module.scss';
 import { Menu } from "./Menu";
 import clsx from "clsx";
 

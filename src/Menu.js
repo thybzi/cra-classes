@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import classes from './Menu.module.css';
+import classes from './Menu.module.scss';
 
 export function Menu() {
     return (
@@ -18,6 +18,14 @@ export function Menu() {
                     to="/other"
                 >
                     Другая
+                </NavLink>
+            </li>
+            <li className={classes["Menu-item"]}>
+                <NavLink
+                    className={classes["Menu-link"]}
+                    to="/catalog"
+                >
+                    Каталог
                 </NavLink>
             </li>
         </ol>
