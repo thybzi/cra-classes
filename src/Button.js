@@ -1,10 +1,10 @@
 import classes from './Button.module.scss';
 
-export function Button(props) {
-    const {
-        text,
-        smallText,
-    } = props;
+export function Button({
+    text,
+    smallText,
+    ...props
+}) {
 
     return (
         <button

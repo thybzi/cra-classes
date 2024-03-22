@@ -1,21 +1,16 @@
 import classes from './App.module.scss';
-import { Menu } from './Menu';
-import { NavLink, useLoaderData, useNavigate, useSearchParams } from 'react-router-dom';
-// import { useEffect, useState } from 'react';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { Button } from './Button';
+import { TopBar } from './TopBar';
 
 export function CatalogPage() {
-  // const itemsPerPage = 5;
-  // const [params] = useSearchParams();
-  // const [page, setPage] = useState(params.get('page') || 1);
-
   const items = useLoaderData();
   const navigate = useNavigate();
 
   return (
     <div className={classes.App}>
       <header className={classes["App-header"]}>
-        <Menu/>
+        <TopBar/>
 
         <ul style={{
           display: 'flex',

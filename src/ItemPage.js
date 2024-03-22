@@ -1,6 +1,6 @@
 import classes from './App.module.scss';
-import { Menu } from './Menu';
 import { useLoaderData } from 'react-router-dom';
+import { TopBar } from './TopBar';
 
 export function ItemPage() {
   const itemData = useLoaderData();
@@ -8,7 +8,7 @@ export function ItemPage() {
   return (
     <div className={classes.App}>
       <header className={classes["App-header"]}>
-        <Menu/>
+        <TopBar/>
 
         <img
           src={itemData.strMealThumb}

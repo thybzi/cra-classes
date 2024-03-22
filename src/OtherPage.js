@@ -1,14 +1,15 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { Button } from "./Button";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import appClasses from './App.module.scss';
 import classes from './OtherPage.module.scss';
-import { Menu } from "./Menu";
 import clsx from "clsx";
+import { TopBar } from "./TopBar";
+import { AppContext } from "./App";
 
 export function OtherPage() {
     const [count, setCount] = useState(0);
-    const [isLight, setIsLight] = useState(false);
+    const {isLight, setIsLight} = useContext(AppContext);
     const [params, setParams] = useSearchParams();
     const [user, setUser] = useState({
         name: params.get('name') || 'Айгуль',
@@ -62,7 +63,7 @@ export function OtherPage() {
             isLight && appClasses['App-header-light'],
         ])}>
 
-            <Menu/>
+            <TopBar/>
 
             <h1>Hello world</h1>
             <Button text={count} onClick={handleCounterClick}/>
